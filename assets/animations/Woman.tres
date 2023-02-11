@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=2]
+
+[ext_resource path="res://assets/Tiles/woman/tile_0484.png" type="Texture" id=1]
+[ext_resource path="res://assets/Tiles/woman/tile_0456.png" type="Texture" id=2]
+[ext_resource path="res://assets/Tiles/woman/tile_0482.png" type="Texture" id=3]
+[ext_resource path="res://assets/Tiles/woman/tile_0458.png" type="Texture" id=4]
+[ext_resource path="res://assets/Tiles/woman/tile_0485.png" type="Texture" id=5]
+[ext_resource path="res://assets/Tiles/woman/tile_0455.png" type="Texture" id=6]
+[ext_resource path="res://assets/Tiles/woman/tile_0457.png" type="Texture" id=7]
+[ext_resource path="res://assets/Tiles/woman/tile_0483.png" type="Texture" id=8]
+[ext_resource path="res://assets/Tiles/woman/tile_0429.png" type="Texture" id=9]
+
+[resource]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "stay",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 2.0
+} ]
