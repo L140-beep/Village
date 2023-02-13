@@ -8,6 +8,40 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Human",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassHuman.gd"
+}, {
+"base": "TownResource",
+"class": "Iron",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassIron.gd"
+}, {
+"base": "Reference",
+"class": "Resource",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassResource.gd"
+}, {
+"base": "TownResource",
+"class": "Wood",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassWood.gd"
+}, {
+"base": "Node2D",
+"class": "Workplace",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassWorkplace.gd"
+} ]
+_global_script_class_icons={
+"Human": "",
+"Iron": "",
+"Resource": "",
+"Wood": "",
+"Workplace": ""
+}
+
 [application]
 
 config/name="Godot Town"

@@ -1,11 +1,13 @@
-class Human:
-	var _name : String
-	var _surname : String
-	var _age : int
-	var _sex : String
+class_name Human
 
-	func _init(name : String, surname : String, age : int, sex : String):
-		self._name = name
-		self._surname = surname
-		self._age = age
-		self._sex = sex
+var _name : String
+var _surname : String
+var _age : int
+var _sex : String
+var human_id : int
+
+func _init(name : String, surname : String, age : int, sex : String):
+	_name = name
+	_surname = surname
+	_age = age
+	_sex = sex
