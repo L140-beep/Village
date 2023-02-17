@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "TownObject",
 "class": "Human",
 "language": "GDScript",
 "path": "res://scripts/classes/ClassHuman.gd"
@@ -19,8 +19,13 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/classes/ClassIron.gd"
 }, {
+"base": "Node2D",
+"class": "TownObject",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassTownObject.gd"
+}, {
 "base": "Reference",
-"class": "Resource",
+"class": "TownResource",
 "language": "GDScript",
 "path": "res://scripts/classes/ClassResource.gd"
 }, {
@@ -29,7 +34,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/classes/ClassWood.gd"
 }, {
-"base": "Node2D",
+"base": "TownObject",
 "class": "Workplace",
 "language": "GDScript",
 "path": "res://scripts/classes/ClassWorkplace.gd"
@@ -37,7 +42,8 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Human": "",
 "Iron": "",
-"Resource": "",
+"TownObject": "",
+"TownResource": "",
 "Wood": "",
 "Workplace": ""
 }

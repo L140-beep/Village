@@ -65,11 +65,12 @@ func set_animation(velocity):
 func _on_Clock_time(current_time):
 	match current_time:
 		1, 2:
-			current_goal_index += 1
-			current_goal_index %= goals.size()
-			goal_pos = goals[current_goal_index].global_position
-			print(goals[current_goal_index].global_position)
-			$NavigationAgent2D.set_target_location(goal_pos)
+			if goals.size() != 0:
+				current_goal_index += 1
+				current_goal_index %= goals.size()
+				goal_pos = goals[current_goal_index].global_position
+				print(goals[current_goal_index].global_position)
+				$NavigationAgent2D.set_target_location(goal_pos)
 	
 	
 	

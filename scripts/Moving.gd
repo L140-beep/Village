@@ -1,0 +1,65 @@
+extends KinematicBody2D
+
+
+
+export var current_speed = 50
+export var arrival_tolerance = 10
+
+var goal_pos
+
+enum Sex {Woman, Man}
+
+func _ready():
+	get_node("/root/GodotTown/Clock").connect("time", self, "_on_Clock_time")
+	var _sex = get_parent()._sex
+
+	match _sex:
+		Sex.Man:
+			pass
+		Sex.Woman:
+			$Sprite.frames = load("res://assets/animations/Woman.tres")
+
+func _physics_process(delta):
+	pass
+	# # Similar to the car, when the pedestrian gets close enough to the goal, despawn it
+	# if current_goal_index != -1:
+	# 	if global_position.distance_to(goal_pos) <= arrival_tolerance:
+	# 		set_animation(Vector2.ZERO)
+	# 		return
+	# 	# # Find the next point in the path to navigate to and update the internal path within the agent
+	# 	var next_location = $NavigationAgent2D.get_next_location()
+	# 	#Calculate the direction and movement just as before
+	# 	var direction = (next_location - global_position).normalized()
+	# 	var movement = direction * current_speed
+	# 	$NavigationAgent2D.set_velocity(movement * delta)
+	# else:
+	# 	set_animation(Vector2.ZERO)
+
+func _on_NavigationAgent2D_velocity_computed(safe_velocity):
+	safe_velocity = safe_velocity.normalized()
+	set_animation(safe_velocity)	
+	move_and_collide(safe_velocity)
+	
+func set_animation(velocity):
+	if velocity.x > 0.1:
+		$Sprite.animation = "walk_right"
+	if velocity.y > 0.1:
+		$Sprite.animation = "walk_down"
+	if velocity.x < -0.1:
+		$Sprite.animation = "walk_left"
+	if velocity.y < -0.1:
+		$Sprite.animation = "walk_up"
+	if velocity == Vector2.ZERO:
+		$Sprite.animation = "stay"
+
+func _on_Clock_time(current_time):
+	pass
+	# match current_time:
+	# 	1, 2:
+	# 		if goals.size() != 0:
+	# 			current_goal_index += 1
+	# 			current_goal_index %= goals.size()
+	# 			goal_pos = goals[current_goal_index].global_position
+	# 			print(goals[current_goal_index].global_position)
+	# 			$NavigationAgent2D.set_target_location(goal_pos)
+

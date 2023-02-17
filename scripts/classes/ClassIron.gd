@@ -1,2 +1,4 @@
 class_name Iron extends TownResource
-var price = 150
+
+func initialize():
+	price = 150

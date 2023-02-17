@@ -1,13 +1,21 @@
-class_name Human
+class_name Human 
+extends TownObject
 
-var _name : String
-var _surname : String
-var _age : int
-var _sex : String
-var human_id : int
+export var _name : String
+export var _surname : String
+export var _age : int
 
-func _init(name : String, surname : String, age : int, sex : String):
+enum Sex {Woman, Man}
+export(Sex) var _sex = Sex.Man
+
+func _ready():
+	._ready()
+
+func initialize(name : String, surname : String, age : int, sex : String):
 	_name = name
 	_surname = surname
 	_age = age
 	_sex = sex
+
+func get_class(): 
+	return "Human"
