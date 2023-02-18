@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "TownObject",
+"class": "Home",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassHome.gd"
+}, {
+"base": "TownObject",
 "class": "Human",
 "language": "GDScript",
 "path": "res://scripts/classes/ClassHuman.gd"
@@ -40,6 +45,7 @@ _global_script_classes=[ {
 "path": "res://scripts/classes/ClassWorkplace.gd"
 } ]
 _global_script_class_icons={
+"Home": "",
 "Human": "",
 "Iron": "",
 "TownObject": "",
