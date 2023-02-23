@@ -1,6 +1,6 @@
 class_name Workplace extends TownObject
 
-export(int) var worker_id = -1
+export(int) var owner_id = -1
 var resource : TownResource
 export(int)var performance : int
 # var requirements : Array

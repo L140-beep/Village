@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "TownObject",
+"class": "BulletinBoard",
+"language": "GDScript",
+"path": "res://scripts/classes/ClassBulletinBoard.gd"
+}, {
+"base": "TownObject",
 "class": "Home",
 "language": "GDScript",
 "path": "res://scripts/classes/ClassHome.gd"
@@ -45,6 +50,7 @@ _global_script_classes=[ {
 "path": "res://scripts/classes/ClassWorkplace.gd"
 } ]
 _global_script_class_icons={
+"BulletinBoard": "",
 "Home": "",
 "Human": "",
 "Iron": "",
@@ -70,4 +76,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
