@@ -8,8 +8,16 @@ export var _age : int
 enum Sex {Woman, Man}
 var _sex
 
+enum ActionType {FindJob, FindHome, Working, Meal, Sleep, FreeTime}
+
+
 var home : Home = null 
-var goals = {}
+
+var personal_goals = []
+var required_goals = []
+
+var cheerfulness = 100
+var fullness = 100
 
 func _ready():
 	._ready()
@@ -37,7 +45,7 @@ func add_own_thing():
 	pass
 
 func do_own_things():
-	return true
+	pass
 	
 func _on_Clock_time(current_time):
 	pass

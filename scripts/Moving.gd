@@ -1,5 +1,4 @@
 extends KinematicBody2D
-
 export var current_speed = 50
 export var arrival_tolerance = 10
 

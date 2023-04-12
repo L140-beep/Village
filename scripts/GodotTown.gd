@@ -1,6 +1,6 @@
 extends Node2D
 
-
+#TODO: Реализовать в качестве единого map
 var people = []
 var workplaces = []
 var homes = []
@@ -13,19 +13,16 @@ func _ready():
 	$Music.play()
 
 func get_free_objects(objects):
-	if objects[0].has_attribute("owner_id"):
-		var result = []
+	var result = []
 
-		for object in objects:
-			if object.owner_id == -1:
-				result.append(object)
-		
-		return result
+	for object in objects:
+		if object.owner_id == -1:
+			result.append(object)
 	
-	else:
-		push_error("Object doesn't have attribute owner_id")
+	return result
 
-
+func get_boards():
+	return boards
 
 func get_info():
 	var free_workplaces = get_free_objects(workplaces)

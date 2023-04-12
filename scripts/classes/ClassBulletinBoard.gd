@@ -22,7 +22,6 @@ func update_info():
 		
 		free_workplaces = info[0]
 		free_homes = info[1]
-	
 
 func _on_Clock_time(current_time):
 	if !updated_today:
