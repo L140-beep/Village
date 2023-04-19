@@ -9,10 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "BtNode",
+"class": "BtAction",
+"language": "GDScript",
+"path": "res://scripts/BT/Action.gd"
+}, {
+"base": "Reference",
+"class": "BtNode",
+"language": "GDScript",
+"path": "res://scripts/BT/BtNode.gd"
+}, {
 "base": "TownObject",
 "class": "BulletinBoard",
 "language": "GDScript",
 "path": "res://scripts/classes/ClassBulletinBoard.gd"
+}, {
+"base": "BtNode",
+"class": "Fallback",
+"language": "GDScript",
+"path": "res://scripts/BT/Fallback.gd"
 }, {
 "base": "Reference",
 "class": "Goal",
@@ -55,7 +70,10 @@ _global_script_classes=[ {
 "path": "res://scripts/classes/ClassWorkplace.gd"
 } ]
 _global_script_class_icons={
+"BtAction": "",
+"BtNode": "",
 "BulletinBoard": "",
+"Fallback": "",
 "Goal": "",
 "Home": "",
 "Human": "",
